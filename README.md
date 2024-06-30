@@ -1,4 +1,5 @@
 # PacketFixMCP
+## 喜欢点个Star
 ### 如果想要给你的客户端加上PacketFix
 ### 请按照以下步骤修改你的客户端代码：
 
