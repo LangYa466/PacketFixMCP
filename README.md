@@ -2,7 +2,7 @@
 ## 喜欢点个Star
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=LangYa466/PacketFixMCP&type=Date)](https://star-history.com/#LangYa466/PacketFixMCP&Date)
+[![Star History Char](https://api.star-history.com/svg?repos=LangYa466/PacketFixMCP&type=Date)](https://star-history.com/#LangYa466/PacketFixMCP&Date&theme=dark)
 
 ### 如果想要给你的客户端加上PacketFix
 ### 请按照以下步骤修改你的客户端代码：
