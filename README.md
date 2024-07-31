@@ -115,17 +115,17 @@
 ##### onLivingUpdate方法
 ##### 找到这一段代码
 ```java
-        if (Math.abs(this.motionX) < movementThreshold)
+     if (Math.abs(this.motionX) < 0.005D)
         {
             this.motionX = 0.0D;
         }
 
-        if (Math.abs(this.motionY) < movementThreshold)
+        if (Math.abs(this.motionY) < 0.005D)
         {
             this.motionY = 0.0D;
         }
 
-        if (Math.abs(this.motionZ) < movementThreshold)
+        if (Math.abs(this.motionZ) < 0.005D)
         {
             this.motionZ = 0.0D;
         }
