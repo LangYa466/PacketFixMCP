@@ -159,19 +159,20 @@
 #### readPacketData
 ##### 直接替换以下代码
 ```java
-    public void readPacketData(PacketBuffer buf) throws IOException
+  public void writePacketData(PacketBuffer buf) throws IOException
     {
-        this.position = buf.readBlockPos();
-        this.placedBlockDirection = buf.readUnsignedByte();
-        this.stack = buf.readItemStackFromBuffer();
-        if (ViaLoadingBase.getInstance().getTargetVersion().newerThanOrEqualTo(ProtocolVersion.v1_12_2)) {
-            this.facingX = (float)buf.readUnsignedByte();
-            this.facingY = (float)buf.readUnsignedByte();
-            this.facingZ = (float)buf.readUnsignedByte();
+
+        buf.writeBlockPos(this.position);
+        buf.writeByte(this.placedBlockDirection);
+        buf.writeItemStackToBuffer(this.stack);
+        if (ViaLoadingBase.getInstance().getTargetVersion().getVersion() > 47) {
+            buf.writeByte((int)(this.facingX));
+            buf.writeByte((int)(this.facingY));
+            buf.writeByte((int)(this.facingZ));
         } else {
-            this.facingX = (float)buf.readUnsignedByte() / 16.0F;
-            this.facingY = (float)buf.readUnsignedByte() / 16.0F;
-            this.facingZ = (float)buf.readUnsignedByte() / 16.0F;
+            buf.writeByte((int)(this.facingX * 16.0F));
+            buf.writeByte((int)(this.facingY * 16.0F));
+            buf.writeByte((int)(this.facingZ * 16.0F));
         }
     }
 
