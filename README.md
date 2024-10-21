@@ -156,7 +156,7 @@
 
 
 ### C08PacketPlayerBlockPlacement
-#### readPacketData
+#### writePacketData
 ##### 直接替换以下代码
 ```java
   public void writePacketData(PacketBuffer buf) throws IOException
